@@ -44,9 +44,9 @@
         </div>
         <li class="nav-item">
           <div class="">
-            <a href="https://twitter.com/DBassoff" class="text-dark fab fa-twitter-square m-2"></a>
-            <a href="" class="text-dark fab fa-instagram m-2"></a>
-            <a href="https://www.facebook.com/Mona.Lisa.bijoux" class="text-dark fab fa-facebook-square m-2"></a>
+            <a href="https://twitter.com/DBassoff" class="text-dark fab fa-twitter-square m-2" title="twitter"></a>
+            <!-- <a href="" class="text-dark fab fa-instagram m-2"></a> -->
+            <a href="https://www.facebook.com/Mona.Lisa.bijoux" class="text-dark fab fa-facebook-square m-2" title="facebook"></a>
           </div>
         </li>
       </li>

@@ -10,3 +10,8 @@ function contactForm(array $contact, $bdd){
       ":text_contact" => $contact["text_contact"]
     ]);
   }
+
+  function deleteContact(Array $deleteContact, $bdd){
+    $req = $bdd->prepare("DELETE FROM contact WHERE id_contact = ?");
+    $req->execute([$deleteContact['id_contact']]);
+   }

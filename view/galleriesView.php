@@ -5,7 +5,8 @@
 <section class="d-flex justify-content-center mt-3">
  <div class="card" style="width: 50rem;">
    <div class="card-body">
-     <h5 class="card-title">galeries en ligne</h5>
+     <h5 class="card-title text-center">galeries en ligne</h5>
+     <div class="dropdown-divider mb-3"></div>
      <?php
      foreach ($galleries as $key => $gallery){
      ?>

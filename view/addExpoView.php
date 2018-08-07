@@ -14,6 +14,7 @@
           au :
           <input type="date" name="endDate_expo" placeholder="date de fin" class="mb-2"><br>
           <textarea class="card-text mb-2" name="text_expo" rows="8" cols="80" placeholder="informations complémentaires"></textarea>
+          <input type="text" name="expo_link" class="mb-2" placeholder="URL">
       </div>
       <button type="submit" name="addExpo" class="bg-success text-white p-3">publier</button>
     </div>
