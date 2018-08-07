@@ -7,7 +7,7 @@
 foreach ($news as $key => $new) {
 ?>
     <div class="card" style="width: 50rem;">
-      <p><?php echo $new["date_news"]; ?></p>
+      <p class="card-subtitle mb-2 text-muted mt-1 ml-1"><?php echo $new["date_news"]; ?></p>
       <img class="card-img-top" src="../public/img/portrait.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title"><?php echo $new["title_news"]; ?></h5>

@@ -1,28 +1,33 @@
 <?php
-function addPost(Array $billet, $bdd) {
-  $req = $bdd->prepare("INSERT INTO billet(image_billet, titre_billet, tech_billet, format_billet, texte_billet, date_billet)
-                        VALUES(:image_billet, :titre_billet, :tech_billet, :format_billet, :texte_billet, :date_billet)");
-  $requete->execute([
-    ":image_billet" => $billet["image_billet"],
-    ":titre_billet" => $billet["titre_billet"],
-    "tech_billet" => $billet["tech_billet"],
-    "format_billet" => $billet["format_billet"],
-    ":texte_billet" => $billet["texte_billet"],
-    ":date_billet" => $billet["date_billet"]
+function addPost(Array $newPost, $bdd) {
+  $req = $bdd->prepare("INSERT INTO billet(title_news, date_news, tech_news, format_news, text_news)
+                        VALUES(:title_news, :date_news, :tech_news, :format_news, :text_news)");
+  $req->execute([
+    // ":image_news" => $newPost["image_news"],
+    ":title_news" => $newPost["title_news"],
+    ":date_news" => $newPost["date_news"],
+    ":tech_news" => $newPost["tech_news"],
+    ":format_news" => $newPost["format_news"],
+    ":text_news" => $newPost["text_news"]
   ]);
 }
 
-function deletePost(Array $billet, $bdd){
-  $req = $bdd->prepare("DELETE FROM billet WHERE id_billet = ?");
-  $req->execute([$billet['id_billet']]);
- }
+// function deletePost(Array $deletePost, $bdd){
+//   $req = $bdd->prepare("DELETE FROM news WHERE id_news = ?");
+//   $req->execute([$deletePost['id_news']]);
+//  }
 
 // function editPost(){
 //
 // }
+function getNews($bdd){
+  $req=$bdd->query('SELECT * FROM news');
+  $news=$req->fetchall(PDO::FETCH_ASSOC);
+    return $news;
+}
 
 function getMessages($bdd){
-    $req=$bdd->query('SELECT * FROM contact ORDER BY id_contact');
+    $req=$bdd->query('SELECT * FROM contact');
     $messages=$req->fetchall(PDO::FETCH_ASSOC);
       return $messages;
       }

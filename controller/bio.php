@@ -1,2 +1,2 @@
 <?php
-require("view/bioView.php");
+require("../view/bioView.php");

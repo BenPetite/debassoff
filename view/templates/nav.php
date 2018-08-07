@@ -29,27 +29,35 @@
         // var_dump($administrateur);
        ?>
       <li class="nav-item mx-2">
-        <a class="nav-link active bg-dark text-white mx-2" href="indexView.php">accueil</a>
+        <a class="nav-link active bg-success text-white mx-2" href="../controller/index.php">accueil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="bioView.php">présentation</a>
+        <a class="nav-link text-dark" href="../controller/bio.php">biographie</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           expositions
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="expoView.php">expositions</a>
-          <a class="dropdown-item" href="galleriesView.php">galeries en ligne</a>
+          <a class="dropdown-item" href="../controller/expo.php">expositions</a>
+          <a class="dropdown-item" href="../controller/galleries.php">galeries en ligne</a>
         </div>
+        <li class="nav-item">
+          <div class="">
+            <a href="https://twitter.com/DBassoff" class="text-dark fab fa-twitter-square m-2"></a>
+            <a href="" class="text-dark fab fa-instagram m-2"></a>
+            <a href="https://www.facebook.com/Mona.Lisa.bijoux" class="text-dark fab fa-facebook-square m-2"></a>
+          </div>
+        </li>
       </li>
       <li class="nav-item mx-2">
-        <a class="nav-link active bg-dark text-white mx-2" href="contactView.php">contact</a>
+        <a class="nav-link active bg-success text-white mx-2" href="../controller/contact.php">contact</a>
       </li>
-      <div class="">
+      <!-- <div class="">
+        <a href="https://twitter.com/DBassoff" class="text-dark fab fa-twitter-square m-2"></a>
         <a href="" class="text-dark fab fa-instagram m-2"></a>
         <a href="https://www.facebook.com/Mona.Lisa.bijoux" class="text-dark fab fa-facebook-square m-2"></a>
-      </div>
+      </div> -->
     </ul>
   </nav>
  <!-- **********/NAV********** -->

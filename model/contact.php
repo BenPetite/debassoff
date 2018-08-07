@@ -1,11 +1,12 @@
 <?php
 function contactForm(array $contact, $bdd){
-    $req = $bdd->prepare('INSERT INTO contact(nom_contact, prenom_contact, email_contact, message_contact)
-                          VALUES(:nom_contact, :prenom_contact, :email_contact, :message_contact)');
+    $req = $bdd->prepare('INSERT INTO contact(date_contact, name_contact, firstName_contact, email_contact, text_contact)
+                          VALUES(:date_contact, :name_contact, :firstName_contact, :email_contact, :text_contact)');
     $req->execute([
-      ":nom_contact" => $contact["nom_contact"],
-      ":prenom_contact" => $contact["prenom_contact"],
+      ":date_contact" => $contact["date_contact"],
+      ":name_contact" => $contact["name_contact"],
+      ":firstName_contact" => $contact["firstName_contact"],
       ":email_contact" => $contact["email_contact"],
-      ":message_contact" => $contact["message_contact"]
+      ":text_contact" => $contact["text_contact"]
     ]);
   }
