@@ -1,5 +1,7 @@
 <?php
-require_once("../model/connectionDB.php");
-$billets=getPosts($bdd);
-// $post=getPost();
-require("../view/indexView.php");
+require_once "../model/connectionDB.php";
+require_once "../model/index.php";
+
+$news=getNews($bdd);
+
+include "../view/indexView.php";

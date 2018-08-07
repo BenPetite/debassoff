@@ -1,8 +1,8 @@
 <?php
-try{
-  $bdd = new PDO('mysql:host=localhost;dbname=asdb;charset=utf8', 'root', '');
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=debassoff;charset=utf8', 'root', '');
   }
-    catch(Exception $e){
-      die('Erreur : '.$e->getMessage());
-    }
- ?>
+catch (Exception $e){
+        die('Erreur : ' . $e->getMessage());
+  }
+?>
