@@ -16,7 +16,8 @@
               <h6 class="mb-3"><?php echo $expo["city_expo"];?> (<?php echo $expo["country_expo"]; ?>)</h6>
               <h6 class="card-subtitle mb-2 text-muted">du <?php echo $expo["startDate_expo"]; ?> au <?php echo $expo["endDate_expo"]; ?></h6>
               <p class="card-text mb-4"><?php echo $expo["text_expo"]; ?></p>
-              <a href="<?php echo $expo["expo_link"]; ?>" class="card-link bg-success text-white mt-4 p-2">voir le lien</a>
+              <button type="button" name="button">supprimer</button>
+              <button type="button" name="button">modifier</button>
             </div>
            </div>
        <?php } ?>

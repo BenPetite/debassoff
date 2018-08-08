@@ -15,6 +15,8 @@
          <h5><?php echo $gallery["olgallery_name"]; ?></h5>
          <a href="<?php echo $gallery['olgallery_link']; ?>" class="btn btn-success">voir la galerie</a>
          <p class="mt-3"><?php echo $gallery['olgallery_infos']; ?></p>
+         <button type="button" name="button">supprimer</button>
+         <button type="button" name="button">modifier</button>
        </div><br>
      </section>
      <?php } ?>

@@ -14,9 +14,9 @@
           <p class="card-text"><?php echo $message["text_contact"]; ?></p>
         </div>
         <div class="d-flex justify-content-center">
-        <a href="#" class="fas fa-archive text-muted m-3" title="archiver le message"></a>
-        <a href="#" class="fas fa-trash-alt text-muted m-3" title="supprimer le message"></a>
-        <a href="" class="fas fa-skull text-muted m-3" title="supprimer le contact"></a>
+          <button type="submit" name="archiveMessage" class="fas fa-archive text-muted m-3" title="archiver le message"></button>
+          <button type="submit" name="deleteMessage" class="fas fa-trash-alt text-muted m-3" title="supprimer le message"></button>
+          <button type="submit" name="deleteContact" class="fas fa-skull text-muted m-3" title="supprimer le contact"></button>
         </div>
       </div>
 <?php
