@@ -1,6 +1,6 @@
 <?php
 require_once "../model/connectionDB.php";
-require_once "../model/index.php";
+require_once "../model/admin.php";
 
 $news=getNews($bdd);
 

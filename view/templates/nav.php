@@ -4,7 +4,7 @@
  <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title></title>
+   <title>AS de Bassoff - <?php echo $title; ?></title>
    <meta name="description" content="dessins, tableaux, bijoux, expositions d'Anne Sophie de Bassoff">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -24,7 +24,7 @@
   <nav class="d-flex justify-content-around mt-3 mb-2 bg-white">
     <ul class="nav nav-pills">
       <li class="nav-item mx-2">
-        <a class="nav-link active bg-success text-white mx-2" href="../controller/index.php">accueil</a>
+        <a class="nav-link buttonAdd text-white mx-2" href="../controller/index.php">accueil</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-dark" href="../controller/bio.php">biographie</a>
@@ -40,8 +40,8 @@
       </li>
       <li class="nav-item">
         <div class="">
-          <a href="https://twitter.com/DBassoff" class="text-dark fab fa-twitter-square m-2" title="twitter"></a>
-          <a href="https://www.facebook.com/Mona.Lisa.bijoux" class="text-dark fab fa-facebook-square m-2" title="facebook"></a>
+          <a href="https://twitter.com/DBassoff" class="text-dark fab fa-twitter-square m-2" title="twitter" target=_blank></a>
+          <a href="https://www.facebook.com/Mona.Lisa.bijoux" class="text-dark fab fa-facebook-square m-2" title="facebook" target=_blank></a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -52,10 +52,11 @@
           <a class="dropdown-item" href="../view/drawingView.php">dessin</a>
           <a class="dropdown-item" href="../view/paintingView.php">peinture</a>
           <a class="dropdown-item" href="../view/pebblesView.php">galets peints</a>
+          <a class="dropdown-item" href="../view/jewelView.php">bijoux peints</a>
         </div>
       </li>
       <li class="nav-item mx-2">
-        <a class="nav-link active bg-success text-white mx-2" href="../controller/contact.php">contact</a>
+        <a class="nav-link buttonAdd text-white mx-2" href="../controller/contact.php">contact</a>
       </li>
     </ul>
   </nav>

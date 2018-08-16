@@ -11,7 +11,8 @@ function contactForm(array $contact, $bdd){
     ]);
   }
 
-  function deleteContact(Array $deleteContact, $bdd){
+function deleteContact(array $dContact, $bdd){
     $req = $bdd->prepare("DELETE FROM contact WHERE id_contact = ?");
-    $req->execute([$deleteContact['id_contact']]);
-   }
+    $req->execute([$dContact["id_contact"]]);
+      return $dContact;
+ }

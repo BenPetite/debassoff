@@ -1,3 +1,4 @@
+<!-- <?php $title="expositions"; ?>
 <?php
   include("templates/nav.php");
   include("templates/header.php");
@@ -21,4 +22,4 @@
   </form>
 <?php
   include("templates/footer.php");
-?>
+?> -->

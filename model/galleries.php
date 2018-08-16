@@ -14,3 +14,9 @@ function addGallery(Array $gallery, $bdd) {
     ":olgallery_infos" => $gallery["olgallery_infos"]
   ]);
 }
+
+function deleteGallery($bdd){
+  $req=$bdd->prepare("DELETE FROM olgallery WHERE id_olgallery=?");
+  $deleteGallery=$req->exec();
+}
+?>

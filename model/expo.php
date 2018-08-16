@@ -5,7 +5,7 @@ function getExpos($bdd){
     return $expos;
 }
 
-function addExpo(Array $expo, $bdd) {
+function addExpo(array $expo, $bdd) {
   $req = $bdd->prepare("INSERT INTO expo(title_expo, place_expo, city_expo, country_expo, startDate_expo, endDate_expo, text_expo, expo_link)
                         VALUES(:title_expo, :place_expo, :city_expo, :country_expo, :startDate_expo, :endDate_expo, :text_expo, :expo_link)");
   $req->execute([
@@ -19,3 +19,11 @@ function addExpo(Array $expo, $bdd) {
     ":expo_link" => $expo["expo_link"]
   ]);
 }
+
+// function deleteExpo(){
+//
+// }
+//
+// function editExpo(){
+//
+// }

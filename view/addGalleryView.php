@@ -1,4 +1,5 @@
-<?php
+<!-- <?php
+$title="galeries en ligne";
   include("templates/nav.php");
   include("templates/header.php");
 ?>
@@ -14,4 +15,4 @@
   </form>
 <?php
   include("templates/footer.php");
-?>
+?> -->
