@@ -6,7 +6,7 @@ $title="admin/galeries";
 <section class="d-flex justify-content-center mt-3">
  <div class="card" style="width: 50rem;">
    <div class="card-body">
-     <h5 class="card-title text-center">galeries en ligne</h5>
+     <h5 class="card-title text-center">administration : galeries en ligne</h5>
      <div class="dropdown-divider mt-3 mb-4"></div>
      <form class="d-flex justify-content-center mt-3" action="" method="post" enctype="multipart/form-data">
        <div class="card" style="width: 40rem;">
@@ -28,8 +28,10 @@ $title="admin/galeries";
          <h5><?php echo $gallery["olgallery_name"]; ?></h5>
          <a href="<?php echo $gallery['olgallery_link']; ?>" class="btn btn-success">voir la galerie</a>
          <p class="mt-3"><?php echo $gallery['olgallery_infos']; ?></p>
-         <button type="button" name="deleteGallery">supprimer</button>
-         <button type="button" name="button">modifier</button>
+         <form class="" action="" method="post" enctype="multipart/form-data">
+           <button type="submit" name="deleteGallery">supprimer</button>
+           <!-- <button type="submit" name="button">modifier</button> -->
+         </form>
        </div><br>
      </section>
      <?php } ?>

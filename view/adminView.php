@@ -2,7 +2,7 @@
   include "templates/nav.php";
   include "templates/header.php";
 ?>
-<article class="">
+<article class="justify-content-center">
  <div class="card" style="width: 40rem;">
   <div class="card-body d-flex flex-column justify-content-center ">
     <h5 class="card-title text-center">espace d'administration</h5>

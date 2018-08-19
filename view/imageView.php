@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 include "templates/nav.php";
 include "templates/header.php";
  ?>
@@ -7,4 +7,4 @@ include "templates/header.php";
   </article>
 <?php
 include "templates/footer.php";
- ?>
+ ?> -->

@@ -7,4 +7,5 @@
   </header>
 <!-- **********/HEADER********** -->
 <!-- **********MAIN********** -->
-  <main class="d-flex justify-content-center">
+
+<main>

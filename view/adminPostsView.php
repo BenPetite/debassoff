@@ -7,7 +7,8 @@
 <article class="d-flex flex-column justify-content-center mt-3">
   <section>
 <!-- PICTURE UPLOAD -->
-    <h5 class="card-title text-center">image à télécharger</h5>
+<h5 class="card-title text-center">administration : publications</h5>
+    <h6 class="card-title text-center">image à télécharger</h6>
     <form class="mt-3" action="../view/upload.php" method="post" enctype="multipart/form-data">
       <div class="card" style="width: 40rem;">
         <div class="card-body">
@@ -40,8 +41,8 @@
   <?php
   foreach ($news as $key => $new) {
   ?>
-  <section>
-    <div class="card" style="width: 20rem;">
+  <section class="d-flex flex-column">
+    <div class="card" style="width: 40rem;">
       <div class="card-body">
         <p class="card-subtitle mb-2 text-muted mt-1 ml-1"><?php echo $new["date_news"]; ?></p>
         <img class="card-img-top" src="../uploads/<?php echo $new["image_news"]; ?>" alt="Card image cap">
@@ -49,7 +50,10 @@
         <h6 class="card-subtitle mb-2 text-muted"><?php echo $new["tech_news"]; ?></h6>
         <p><?php echo $new["format_news"]; ?></p>
         <p><?php echo $new["text_news"]; ?></p>
-        <button type="submit" name="deletePost">supprimer</button>
+        <form class="" action="" method="post" enctype="multipart/form-data">
+          <button type="submit" name="deletePost">supprimer</button>
+        </form>
+        <a href="../controller/editExpo.php">modifier</a>
       </div>
     </div>
   </section>

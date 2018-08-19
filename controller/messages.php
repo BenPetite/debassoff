@@ -5,7 +5,6 @@ require_once "../model/admin.php";
 $messages=getMessages($bdd);
 
 if(isset($_POST["deleteMessage"])){
-  $dMessage=deleteMessage($_POST,$bdd);
+  deleteMessage($_POST, $bdd);
 }
-
 include "../view/messagesView.php";

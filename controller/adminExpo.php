@@ -7,6 +7,13 @@ if(isset($_POST['addExpo'])){
 }
 
 $expos=getExpos($bdd);
-// deleteExpo();
-// editExpo();
+
+if(isset($_GET["index"])){
+  $expo=getExpo($_GET, $bdd);
+}
+
+if(isset($_POST["deleteExpo"])){
+  $dExpo=deleteExpo($_POST, $bdd);
+}
+
 include "../view/adminExpoView.php";

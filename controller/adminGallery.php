@@ -12,6 +12,4 @@ if(isset($_POST["deleteGallery"])){
 deleteGallery($_POST, $bdd);
 }
 
-// editGallery();
-
 include "../view/adminGalleryView.php";

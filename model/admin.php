@@ -16,9 +16,10 @@ function addPost($new, $bdd) {
 
 // supprimer un post
 function deletePost($dNews, $bdd){
+  $id=$_POST;
   $req = $bdd->prepare("DELETE FROM news WHERE id_news=?");
   $req->execute([$dNews['id_news']]);
-    return $dNews;
+  return $dNews;
 }
 
 // modifier un post
@@ -29,19 +30,20 @@ function deletePost($dNews, $bdd){
                         format_news = :newFormat, text_news = :newText
                         WHERE id_news = :newId');
     $req->execute(array(
-    'newTitle' => $newTitle,
-  	'newImage' => $newImage,
-  	'newDate' => $newDate,
-    'newTech' => $newTech,
-    'newFormat' => $newFormat,
-    'newText' => $newText,
+    ':newId' => $newId,
+    ':newTitle' => $newTitle,
+  	':newImage' => $newImage,
+  	':newDate' => $newDate,
+    ':newTech' => $newTech,
+    ':newFormat' => $newFormat,
+    ':newText' => $newText,
 
 	));
 }
 
 // afficher les posts
 function getNews($bdd){
-  $req=$bdd->query('SELECT * FROM news ORDER BY date_news');
+  $req=$bdd->query('SELECT * FROM news ORDER BY date_news DESC');
   $news=$req->fetchall(PDO::FETCH_ASSOC);
     return $news;
 }
@@ -53,18 +55,11 @@ function getMessages($bdd){
     return $messages;
 }
 
-// afficher un message
-// function getMessage($id, $bdd){
-//   $id=$_GET["index"];
-//   $req = $bdd->prepare('SELECT * FROM contact WHERE id_contact=?');
-//   $req->execute(array($id));
-//   $message = $req->fetch();
-//     return $message;
-// }
-
 // supprimer un message
+if(isset($_POST["deleteMessage"])){
 function deleteMessage(array $dMessage, $bdd){
-  $req = $bdd->prepare("DELETE message FROM contact WHERE id_contact=?");
-  $req->execute([$dMessage['id_contact']]);
-    return $dMessage;
+  $id=$_POST;
+  $req = $bdd->prepare("DELETE FROM contact WHERE id_contact=?");
+  $req->execute(array($dMessage["id_contact"]));
  }
+}

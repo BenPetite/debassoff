@@ -15,7 +15,6 @@ $title="messages";
           <p class="card-text"><?php echo $message["text_contact"]; ?></p>
         </div>
         <div class="d-flex justify-content-center">
-          <!-- <button type="submit" name="archiveMessage" class="fas fa-archive text-muted m-3" title="archiver le message"></button> -->
           <form class="form" action="" method="post">
             <input type="hidden" name="id_contact" value="<?php echo $message['id_contact']; ?>">
             <button type="submit" name="deleteMessage" class="text-muted m-3"><i class="fas fa-trash-alt" title="supprimer le message"></i></button>

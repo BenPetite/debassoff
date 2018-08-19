@@ -6,7 +6,7 @@ $title="administration";
   <section class="d-flex justify-content-center mt-3">
    <div class="card justify-content-center" style="width: 50rem;">
      <div class="card-body">
-       <h5 class="card-title text-center">administration : expositions, salons, festivals</h5>
+       <h5 class="card-title text-center">modifier la publication</h5>
        <form class="d-flex justify-content-center mt-3" action="" method="post" enctype="multipart/form-data">
          <div class="card" style="width: 40rem;">
            <div class="card-body">
@@ -21,32 +21,11 @@ $title="administration";
                <textarea class="card-text mb-2" name="text_expo" rows="8" cols="80" placeholder="informations complémentaires"></textarea>
                <input type="text" name="expo_link" class="mb-2" placeholder="URL">
            </div>
-           <button type="submit" name="addExpo" class="bg-success text-white p-3">publier</button>
+           <form class="" action="" method="post" enctype="multipart/form-data">
+             <button type="submit" name="editExpo" class="bg-success text-white p-3">publier</button>
+           </form>
          </div>
        </form>
-       <div class="text-center mt-5">
-        <h5>liste des expositions</h5>
-       </div>
-       <?php
-    foreach ($expos as $key => $expo){
-       ?>
-          <div class="card mb-2 text-center">
-            <div class="card-body">
-              <h4 class="card-title"><em><?php echo $expo["title_expo"]; ?></em></h4>
-              <h6 class=""><?php echo $expo["place_expo"]; ?></h6>
-              <h6 class="mb-3"><?php echo $expo["city_expo"];?> (<?php echo $expo["country_expo"]; ?>)</h6>
-              <h6 class="card-subtitle mb-2 text-muted">du <?php echo $expo["startDate_expo"]; ?> au <?php echo $expo["endDate_expo"]; ?></h6>
-              <p class="card-text mb-4"><?php echo $expo["text_expo"]; ?></p>
-              <form class="" action="" method="post" enctype="multipart/form-data">
-                <button type="submit" name="deleteExpo">supprimer</button>
-                <a href=<?php echo "../view/editExpoView.php?index=".$expo['id_expo']; ?>>modifier</a>
-              </form>
-            </div>
-           </div>
-       <?php } ?>
-     </div>
-   </div>
-  </section>
 <?php
   include "templates/footer.php";
 ?>

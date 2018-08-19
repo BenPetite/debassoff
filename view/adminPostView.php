@@ -8,13 +8,6 @@ $title="post";
     <section class="d-flex justify-content-center mt-3">
      <div class="card justify-content-center" style="width: 20rem;">
        <div class="card-body">
-         <!-- <form action="../view/upload.php" method="post" enctype="multipart/form-data" class="d-flex flex-column justify-content-center">
-          <p>télécharger une image depuis l'ordinateur :</p>
-          <input type="file" name="fileToUpload" id="fileToUpload" class="mb-2"><br>
-          <div class="mt-3">
-            <input type="submit" value="ajouter" name="addPic" class="bg-success">
-          </div>
-        </form> -->
         <form class="" action="index.html" method="post" enctype="multipart/form-data">
           <input type="text" name="image_news" placeholder="nom.format" class="mb-2">
           <input type="text" name="title_news" placeholder=" titre" class="mb-2">
@@ -40,8 +33,10 @@ $title="post";
         <h6 class="card-subtitle mb-2 text-muted"><?php echo $new["tech_news"]; ?></h6>
         <p><?php echo $new["format_news"]; ?></p>
         <p><?php echo $new["text_news"]; ?></p>
+        <form class="" action="" method="post" enctype="multipart/form-data">
           <button type="submit" name="deletePost">supprimer</button>
-          <a href="../controller/editPost.php">modifier</a>
+          <!-- <a href="../controller/editPost.php">modifier</a> -->
+        </form>
       </div>
     </div>
   </section>

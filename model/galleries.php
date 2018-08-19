@@ -15,8 +15,8 @@ function addGallery(Array $gallery, $bdd) {
   ]);
 }
 
-function deleteGallery($bdd){
+function deleteGallery(array $dGallery, $bdd){
+  $id=$_POST;
   $req=$bdd->prepare("DELETE FROM olgallery WHERE id_olgallery=?");
-  $deleteGallery=$req->exec();
-}
+  $req->execute(array($dGallery["id_olgallery"]));}
 ?>
