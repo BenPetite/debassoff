@@ -9,7 +9,7 @@ $title="administration";
        <h5 class="card-title text-center">administration : expositions, salons, festivals</h5>
        <form class="d-flex justify-content-center mt-3" action="" method="post" enctype="multipart/form-data">
          <div class="card" style="width: 40rem;">
-           <div class="card-body">
+           <div class="card-body text-center">
                <input type="text" name="title_expo" placeholder="nom de l'expo" class="mb-2"><br>
                <input type="text" name="place_expo" class="mb-2" placeholder="lieu de l'expo"><br>
                <input type="text" name="city_expo" placeholder="ville" class="mb-2"><br>
@@ -37,10 +37,16 @@ $title="administration";
               <h6 class="mb-3"><?php echo $expo["city_expo"];?> (<?php echo $expo["country_expo"]; ?>)</h6>
               <h6 class="card-subtitle mb-2 text-muted">du <?php echo $expo["startDate_expo"]; ?> au <?php echo $expo["endDate_expo"]; ?></h6>
               <p class="card-text mb-4"><?php echo $expo["text_expo"]; ?></p>
-              <form class="" action="" method="post" enctype="multipart/form-data">
-                <button type="submit" name="deleteExpo">supprimer</button>
-                <a href=<?php echo "../view/editExpoView.php?index=".$expo['id_expo']; ?>>modifier</a>
-              </form>
+              <div class="d-flex justify-content-center">
+                <form class="form" action="" method="post">
+                  <input type="hidden" name="id_expo" value="<?php echo $expo['id_expo']; ?>">
+                  <button href=<?php echo "../controller/editExpo.php?index=".$expo['id_expo']; ?> class="text-muted m-3"><i class="fas fa-edit" title="modifier"></i></button>
+                </form>
+                <form class="form" action="" method="post">
+                  <input type="hidden" name="id_expo" value="<?php echo $expo['id_expo']; ?>">
+                  <button type="submit" name="deleteExpo" class="text-muted m-3"><i class="fas fa-trash-alt" title="supprimer"></i></button>
+                </form>
+              </div>
             </div>
            </div>
        <?php } ?>

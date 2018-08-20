@@ -18,23 +18,25 @@ if(isset($_POST["submit"])) {
 }
 // Check if file already exists
 if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
+    echo "ce fichier a déjà été téléchargé";
+    // Sorry, file already exists.
     $uploadOk = 0;
 }
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 50000000) {
-    echo "Sorry, your file is too large.";
+    echo "ce fichier est trop volumineux";
+    // Sorry, your file is too large.
     $uploadOk = 0;
 }
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    echo "seuls les fichiers JPG, JPEG, PNG & GIF sont autorisés";
     $uploadOk = 0;
 }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
+    echo " votre fichier n'a pas été téléchargé";
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
@@ -45,7 +47,7 @@ if ($uploadOk == 0) {
 }
 ?>
 <p> </p><br>
-<div class="mt-3">
+<div class="card text-center mt-3">
   <a href="../controller/adminPost.php" class="bg-success text-light p-2">retour</a>
 </div>
 <?php include "templates/footer.php"; ?>

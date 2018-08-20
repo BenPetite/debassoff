@@ -9,7 +9,7 @@ if(isset($_POST["addGallery"])){
 }
 
 if(isset($_POST["deleteGallery"])){
-deleteGallery($_POST, $bdd);
+  deleteGallery($_POST, $bdd);
 }
 
 include "../view/adminGalleryView.php";

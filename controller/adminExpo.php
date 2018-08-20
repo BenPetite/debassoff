@@ -4,6 +4,7 @@ require_once "../model/expo.php";
 
 if(isset($_POST['addExpo'])){
   addExpo($_POST, $bdd);
+  header('Location: ../view/adminView.php');
 }
 
 $expos=getExpos($bdd);
@@ -13,7 +14,7 @@ if(isset($_GET["index"])){
 }
 
 if(isset($_POST["deleteExpo"])){
-  $dExpo=deleteExpo($_POST, $bdd);
+  deleteExpo($_POST, $bdd);
 }
 
 include "../view/adminExpoView.php";

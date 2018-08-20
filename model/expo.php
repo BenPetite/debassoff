@@ -28,11 +28,11 @@ function addExpo(array $expo, $bdd) {
   ]);
 }
 
+
   function deleteExpo(array $dExpo, $bdd){
     $id=$_POST["id_expo"];
     $req=$bdd->prepare('DELETE FROM expo WHERE id_expo=?');
-    $req->execute(array($id["id_expo"]));
-    $dExpo=$id->fetchall(PDO::FETCH_ASSOC);
+    $req->execute([$dExpo["id_expo"]]);
   }
 
   function editExpo($nExpo, $bdd){

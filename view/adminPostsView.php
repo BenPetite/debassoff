@@ -4,25 +4,26 @@
   include "templates/nav.php";
   include "templates/header.php";
 ?>
-<article class="d-flex flex-column justify-content-center mt-3">
-  <section>
-<!-- PICTURE UPLOAD -->
-<h5 class="card-title text-center">administration : publications</h5>
-    <h6 class="card-title text-center">image à télécharger</h6>
-    <form class="mt-3" action="../view/upload.php" method="post" enctype="multipart/form-data">
+  <article class="">
+  <!-- d-flex flex-column justify-content-center mt-3 -->
+    <h5 class="card-title text-center">administration : publications</h5>
+    <p class="card mt-3 text-center m-2 p-2" style="width: 40rem;"><small>méthode :<br> 1- télécharger une image depuis l'ordinateur,
+      en noter le nom et le format (ex.: "nom.jpg")<br> 2- ajouter <br>3- remplir les champs du formulaire <br> 4- publier</small></p>
+    <h6 class="card-title text-center mt-3">image à télécharger</h6>
+    <form class="d-flex justify-content-center mt-3 text-center" action="../view/upload.php" method="post" enctype="multipart/form-data">
       <div class="card" style="width: 40rem;">
         <div class="card-body">
-          <input type="file" name="fileToUpload" id="fileToUpload" class="mb-2"><br>
+        <input type="file" name="fileToUpload" id="fileToUpload" class="mb-2"><br>
           <div class="mt-3">
-            <input type="submit" value="ajouter" name="submit" class="bg-success">
+          <input type="submit" value="ajouter" name="submit" class="bg-success">
           </div>
         </div>
       </div>
     </form>
 <!-- /PICTURE UPLOAD -->
 <!-- POST -->
-    <h5 class="card-title text-center">publier</h5>
-    <form class="d-flex justify-content-center mt-3" action="" method="post" enctype="multipart/form-data">
+    <h6 class="card-title text-center mt-3">publier</h6>
+    <form class="d-flex justify-content-center mt-3 text-center" action="" method="post" enctype="multipart/form-data">
       <div class="card" style="width: 40rem;">
         <div class="card-body">
           <input type="text" name="image_news" placeholder="nom.format de l'image" class="mb-2"><br>
@@ -38,27 +39,32 @@
   </section>
 <!-- GET POSTS -->
   <h5 class="mt-5 text-center mb-3">publications</h5>
-  <?php
+<?php
   foreach ($news as $key => $new) {
-  ?>
-  <section class="d-flex flex-column">
+?>
+  <section class="d-flex justify-content-center mt-3">
     <div class="card" style="width: 40rem;">
-      <div class="card-body">
+      <div class="card-body self-align-center">
         <p class="card-subtitle mb-2 text-muted mt-1 ml-1"><?php echo $new["date_news"]; ?></p>
         <img class="card-img-top" src="../uploads/<?php echo $new["image_news"]; ?>" alt="Card image cap">
-        <h5 class="card-title"><?php echo $new["title_news"]; ?></h5>
-        <h6 class="card-subtitle mb-2 text-muted"><?php echo $new["tech_news"]; ?></h6>
-        <p><?php echo $new["format_news"]; ?></p>
-        <p><?php echo $new["text_news"]; ?></p>
-        <form class="" action="" method="post" enctype="multipart/form-data">
-          <button type="submit" name="deletePost">supprimer</button>
-        </form>
-        <a href="../controller/editExpo.php">modifier</a>
+        <h5 class="card-title text-center"><?php echo $new["title_news"]; ?></h5>
+        <h6 class="card-subtitle mb-2 text-muted text-center"><?php echo $new["tech_news"]; ?></h6>
+        <p class="text-center"><?php echo $new["format_news"]; ?></p>
+        <p class=" text-center"><?php echo $new["text_news"]; ?></p>
+        <div class="d-flex justify-content-center">
+          <form class="form" action="" method="post">
+            <input type="hidden" name="id_news" value="<?php echo $new['id_news']; ?>">
+            <button type="submit" name="deletePost" class="text-muted m-3"><i class="fas fa-trash-alt" title="supprimer"></i></button>
+          </form>
+          <form class="form" action="" method="post">
+            <input type="hidden" name="id_news" value="<?php echo $new['id_news']; ?>">
+            <button type="submit" href="../controller/editPost.php" name="editPost" class="text-muted m-3"><i class="fas fa-edit" title="modifier"></i></button>
+          </form>
       </div>
     </div>
   </section>
 </article>
-  <?php
+<?php
 }
   include "templates/footer.php";
 ?>

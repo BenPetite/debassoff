@@ -19,7 +19,6 @@ function deletePost($dNews, $bdd){
   $id=$_POST;
   $req = $bdd->prepare("DELETE FROM news WHERE id_news=?");
   $req->execute([$dNews['id_news']]);
-  return $dNews;
 }
 
 // modifier un post
@@ -61,5 +60,8 @@ function deleteMessage(array $dMessage, $bdd){
   $id=$_POST;
   $req = $bdd->prepare("DELETE FROM contact WHERE id_contact=?");
   $req->execute(array($dMessage["id_contact"]));
+  header('Location: ../controller/index.php');
  }
 }
+
+?>
