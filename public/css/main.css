@@ -121,7 +121,11 @@ textarea {
 /* footer */
 
 /* main */
-
+article{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
 /* images */
   /*images modal */
 

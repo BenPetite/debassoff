@@ -1,4 +1,5 @@
 <?php
+$description="100 yeux : galets peints par Anne Sophie de Bassoff";
 $title="100 yeux";
   include "templates/nav.php";
   include "templates/header.php";
@@ -9,9 +10,9 @@ $title="100 yeux";
        <h5 class="card-title text-center">100 yeux</h5>
        <div class="dropdown-divider mt-3 mb-4"></div>
        <div class="d-flex align-items-baseline justify-content-around py-2">
-           <img id="id1" class = "popup border" src="../public/img/yeux1.jpg" alt="image 1" width="180" title="cliquez pour agrandir">
-           <img id="id2" class = "popup border" src="../public/img/yeux2.jpg" alt="image 2" width="180" title="cliquez pour agrandir">
-           <img id="id3" class="popup border" src="../public/img/yeux3.jpg" alt="image 3" width="180" title="cliquez pour agrandir">
+           <img id="id1" class = "popup border" src="../public/img/yeux1.jpg" alt="chemin d'yeux" width="180" title="cliquez pour agrandir">
+           <img id="id2" class = "popup border" src="../public/img/yeux2.jpg" alt="oeil peint" width="180" title="cliquez pour agrandir">
+           <img id="id3" class="popup border" src="../public/img/yeux3.jpg" alt="oeil peint" width="180" title="cliquez pour agrandir">
              <div id="myModal" class="modal">
                <span class="close">×</span>
                <img class="modal-content" id="img01">

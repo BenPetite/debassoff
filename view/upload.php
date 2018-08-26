@@ -5,7 +5,7 @@ $target_dir = "../uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// Check if image file is a actual image or fake image
+
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
@@ -16,28 +16,25 @@ if(isset($_POST["submit"])) {
         $uploadOk = 0;
     }
 }
-// Check if file already exists
+
 if (file_exists($target_file)) {
     echo "ce fichier a déjà été téléchargé";
-    // Sorry, file already exists.
     $uploadOk = 0;
 }
-// Check file size
+
 if ($_FILES["fileToUpload"]["size"] > 50000000) {
     echo "ce fichier est trop volumineux";
-    // Sorry, your file is too large.
     $uploadOk = 0;
 }
-// Allow certain file formats
+
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
     echo "seuls les fichiers JPG, JPEG, PNG & GIF sont autorisés";
     $uploadOk = 0;
 }
-// Check if $uploadOk is set to 0 by an error
+
 if ($uploadOk == 0) {
     echo " votre fichier n'a pas été téléchargé";
-// if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
@@ -50,4 +47,6 @@ if ($uploadOk == 0) {
 <div class="card text-center mt-3">
   <a href="../controller/adminPost.php" class="bg-success text-light p-2">retour</a>
 </div>
-<?php include "templates/footer.php"; ?>
+<?php
+include "templates/footer.php";
+?>

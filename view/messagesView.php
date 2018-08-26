@@ -22,9 +22,9 @@ $title="messages";
         </div>
       </div>
 <?php
-}
+    }
 ?>
-    </article>
+  </article>
 <?php
   include("templates/footer.php");
 ?>

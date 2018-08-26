@@ -3,18 +3,15 @@ require_once "../model/connectionDB.php";
 require_once "../model/admin.php";
 require_once "../model/image.php";
 
-// GET POSTS
-$news=getNews($bdd);
+  $news=getNews($bdd);
 
-// ADD POST
-if(isset($_POST["addPost"])){
-  addPost($_POST, $bdd);
+  if(isset($_POST["addPost"])){
+    addPost($_POST, $bdd);
+    }
+
+  if(isset($_POST["deletePost"])){
+    deletePost($_POST, $bdd);
+    header('Location: ../controller/adminPost.php');
   }
-
-// DELETE POST
-if(isset($_POST["deletePost"])){
-  deletePost($_POST, $bdd);
-  header('Location: ../controller/adminPost.php');
-}
 
 include "../view/adminPostsView.php";

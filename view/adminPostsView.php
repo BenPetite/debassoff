@@ -4,24 +4,26 @@
   include "templates/nav.php";
   include "templates/header.php";
 ?>
-  <article class="">
-  <!-- d-flex flex-column justify-content-center mt-3 -->
+<article class="">
+  <section class="card mt-3 text-center m-2 p-2" style="width: 40rem;">
     <h5 class="card-title text-center">administration : publications</h5>
-    <p class="card mt-3 text-center m-2 p-2" style="width: 40rem;"><small>méthode :<br> 1- télécharger une image depuis l'ordinateur,
+    <div class="card-body d-flex flex-column">
+      <p><small>méthode :<br> 1- télécharger une image depuis l'ordinateur,
       en noter le nom et le format (ex.: "nom.jpg")<br> 2- ajouter <br>3- remplir les champs du formulaire <br> 4- publier</small></p>
+    </div>
     <h6 class="card-title text-center mt-3">image à télécharger</h6>
     <form class="d-flex justify-content-center mt-3 text-center" action="../view/upload.php" method="post" enctype="multipart/form-data">
       <div class="card" style="width: 40rem;">
         <div class="card-body">
-        <input type="file" name="fileToUpload" id="fileToUpload" class="mb-2"><br>
+          <input type="file" name="fileToUpload" id="fileToUpload" class="mb-2"><br>
           <div class="mt-3">
-          <input type="submit" value="ajouter" name="submit" class="bg-success">
+            <input type="submit" value="ajouter" name="submit" class="bg-success">
           </div>
         </div>
       </div>
     </form>
-<!-- /PICTURE UPLOAD -->
-<!-- POST -->
+  <!-- /PICTURE UPLOAD -->
+  <!-- POST -->
     <h6 class="card-title text-center mt-3">publier</h6>
     <form class="d-flex justify-content-center mt-3 text-center" action="" method="post" enctype="multipart/form-data">
       <div class="card" style="width: 40rem;">
@@ -60,6 +62,7 @@
             <input type="hidden" name="id_news" value="<?php echo $new['id_news']; ?>">
             <button type="submit" href="../controller/editPost.php" name="editPost" class="text-muted m-3"><i class="fas fa-edit" title="modifier"></i></button>
           </form>
+        </div>
       </div>
     </div>
   </section>

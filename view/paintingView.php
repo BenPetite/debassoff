@@ -1,4 +1,5 @@
 <?php
+$description="tableaux peints par Anne Sophie de Bassoff";
 $title="peinture";
   include "templates/nav.php";
   include "templates/header.php";

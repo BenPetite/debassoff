@@ -1,4 +1,5 @@
 <?php
+$description="page de contact du site d'Anne Sophie de Bassoff";
 $title="contact";
   include "templates/nav.php";
   include "templates/header.php";

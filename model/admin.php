@@ -1,5 +1,4 @@
 <?php
-// ajouter un post
 function addPost($new, $bdd) {
   $new=$_POST;
   $req = $bdd->prepare("INSERT INTO news(image_news, title_news, date_news, tech_news, format_news, text_news)
@@ -14,14 +13,12 @@ function addPost($new, $bdd) {
   ));
 }
 
-// supprimer un post
 function deletePost($dNews, $bdd){
   $id=$_POST;
   $req = $bdd->prepare("DELETE FROM news WHERE id_news=?");
   $req->execute([$dNews['id_news']]);
 }
 
-// modifier un post
   function editPost($bdd){
     $id=$_POST["id_news"];
     $req=$bdd->prepare('UPDATE news
@@ -40,28 +37,23 @@ function deletePost($dNews, $bdd){
 	));
 }
 
-// afficher les posts
 function getNews($bdd){
   $req=$bdd->query('SELECT * FROM news ORDER BY date_news DESC');
   $news=$req->fetchall(PDO::FETCH_ASSOC);
     return $news;
 }
 
-// afficher les messages
 function getMessages($bdd){
   $req=$bdd->query('SELECT * FROM contact ORDER BY date_contact DESC');
   $messages=$req->fetchall(PDO::FETCH_ASSOC);
     return $messages;
 }
 
-// supprimer un message
 if(isset($_POST["deleteMessage"])){
 function deleteMessage(array $dMessage, $bdd){
   $id=$_POST;
   $req = $bdd->prepare("DELETE FROM contact WHERE id_contact=?");
   $req->execute(array($dMessage["id_contact"]));
-  header('Location: ../controller/index.php');
+  header('Location: ../view/adminView.php');
  }
 }
-
-?>

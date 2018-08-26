@@ -28,28 +28,8 @@ function addExpo(array $expo, $bdd) {
   ]);
 }
 
-
   function deleteExpo(array $dExpo, $bdd){
     $id=$_POST["id_expo"];
     $req=$bdd->prepare('DELETE FROM expo WHERE id_expo=?');
     $req->execute([$dExpo["id_expo"]]);
   }
-
-  function editExpo($nExpo, $bdd){
-    $id=$_POST["id_expo"];
-    $req=$bdd->prepare('UPDATE expo
-                        SET title_expo = :newTitle, place_expo = :newPlace, city_expo = :newCity, country_expo = :newCountry,
-                        startDate_expo = :newStartDate, endDate_expo = :newEndDate, text_expo = :newText, expo_link = : newLink
-                        WHERE id_expo = :newId');
-    $req->execute(array(
-    ':newId' => $newId,
-    ':newTitle' => $newTitle,
-    ':newPlace' => $newPlace,
-    ':newCity' => $newCity,
-    ':newCountry' => $newCountry,
-    ':newStartDate' => $newStartDate,
-    ':newEndDate' => $newEndDate,
-    ':newText' => $newText,
-    'newLink' => $newLink
-  ));
-}

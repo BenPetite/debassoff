@@ -21,4 +21,3 @@ function addGallery(Array $gallery, $bdd) {
    $req->execute(array($dGallery["id_olgallery"]));
    header('Location: ../controller/galleries.php');
   }
-?>
